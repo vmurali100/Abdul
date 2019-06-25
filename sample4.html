@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var players = [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11"
+      ];
+      var teamsProb = [];
+      for (i = 0; i < players.length; i++) {
+        for (j = 0; j < players.length; j++) {
+          var newTeam = [...players];
+          newTeam[i] = "C" + newTeam[i];
+          if (i != j) {
+            newTeam[j] = "VC" + newTeam[j];
+          } else {
+            newTeam[j + 1] = "VC" + newTeam[j + 1];
+          }
+          console.log();
+          if (teamsProb.length == 0) {
+            teamsProb.push(JSON.stringify(newTeam));
+          } else {
+            if (teamsProb.indexOf(JSON.stringify(newTeam)) == -1) {
+              teamsProb.push(JSON.stringify(newTeam));
+            }
+          }
+        }
+      }
+
+      console.log(teamsProb);
+    </script>
+  </body>
+</html>
