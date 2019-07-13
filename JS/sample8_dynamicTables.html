@@ -105,6 +105,7 @@
         displayUsers(data);
       }
 
+      //
       function displayUsers(data) {
         document.getElementById("myTable").innerHTML = "";
         for (i = 0; i < data.length; i++) {
@@ -144,9 +145,12 @@
         localStorage.setItem("savedData", JSON.stringify(data));
       }
 
+      //Function Definition
       function displayLatest() {
         var data = JSON.parse(localStorage.getItem("savedData"));
-        displayUsers(data);
+        if (data != null) {
+          displayUsers(data);
+        }
       }
       displayLatest();
     </script>
