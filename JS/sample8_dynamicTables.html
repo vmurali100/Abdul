@@ -57,7 +57,7 @@
           tel: "(524)927-8024"
         }
       ];
-
+      var data = JSON.parse(localStorage.getItem("savedData"));
       // TO create Table Rows
       for (i = 0; i < data.length; i++) {
         var myTr = document.createElement("tr");
