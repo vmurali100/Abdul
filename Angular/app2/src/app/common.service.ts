@@ -5,9 +5,11 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class CommonService {
-  passInfo = new Subject;
+  sendInfo = new Subject
   constructor() { }
+
   exchangeData(msg){
-    this.passInfo.next(msg)
+    this.sendInfo.next(msg)
   }
+
 }

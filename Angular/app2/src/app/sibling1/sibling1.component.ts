@@ -7,14 +7,13 @@ import { CommonService } from '../common.service';
   styleUrls: ['./sibling1.component.css']
 })
 export class Sibling1Component implements OnInit {
-  message="I am Message From Sibling1"
-  constructor(private common:CommonService) { }
+  message = "I am Message from Sibbling1"
+  constructor(private commonService:CommonService) { }
 
   ngOnInit() {
 
   }
-
-  sendInfo(){
-    this.common.exchangeData(this.message)
+  sendMessageToSib2(){
+    this.commonService.exchangeData(this.message)
   }
 }

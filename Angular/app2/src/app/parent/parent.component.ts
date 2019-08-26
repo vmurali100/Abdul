@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
-  message = "Welcome Message From Parent"
+  message = "I am from Parent"
+  msgFromChild: any;
   constructor() { }
 
   ngOnInit() {
   }
-
+  receiveDataFromChild(obj){
+    console.log(obj)
+    this.msgFromChild=obj
+  }
 }

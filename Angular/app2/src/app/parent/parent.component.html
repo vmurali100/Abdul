@@ -1,4 +1,5 @@
 <p>parent works!</p>
+Message Received from Child : {{msgFromChild}}
 <hr>
 
-<app-child [getData]="message"></app-child>
+<app-child [getData]="message" (sendDataFromChild)="receiveDataFromChild($event)"></app-child>

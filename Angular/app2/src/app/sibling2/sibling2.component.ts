@@ -7,14 +7,13 @@ import { CommonService } from '../common.service';
   styleUrls: ['./sibling2.component.css']
 })
 export class Sibling2Component implements OnInit {
-  messagefromSib1: {};
-
-  constructor(private common:CommonService) { }
+  messageFromSib1
+  constructor(private commonService:CommonService) { }
 
   ngOnInit() {
-    this.common.passInfo.subscribe((fromSib)=>{
-      this.messagefromSib1= fromSib
-      console.log(this.messagefromSib1)
+    this.commonService.sendInfo.subscribe(res=>{
+      console.log(res)
+      this.messageFromSib1 = res;
     })
   }
 
