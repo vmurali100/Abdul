@@ -1,36 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-comp1',
-  templateUrl: './comp1.component.html',
-  styleUrls: ['./comp1.component.css']
+  selector: "app-comp1",
+  templateUrl: "./comp1.component.html",
+  styleUrls: ["./comp1.component.css"]
 })
 export class Comp1Component implements OnInit {
+  toArray(): any {
+    throw new Error("Method not implemented.");
+  }
   users: string[];
-
-  constructor() { }
+  message = "I am From Comp1";
+  constructor() {}
 
   ngOnInit() {
     // this.users = data;
   }
 
-  showUsers(){
+  showUsers() {
     this.users = data;
   }
 
-  removeLast(){
-    this.users.pop()
-
+  removeLast() {
+    this.users.pop();
   }
-  removeFirst(){
-    this.users.shift()
-
+  removeFirst() {
+    this.users.shift();
   }
-  addUser(){
-    this.users.push("Hema")
+  addUser() {
+    this.users.push("Hema");
   }
-
 }
 
-
-const data = ["Murali","Abdul","Sudhakar","Thangamani"]
+const data = ["Murali", "Abdul", "Sudhakar", "Thangamani"];

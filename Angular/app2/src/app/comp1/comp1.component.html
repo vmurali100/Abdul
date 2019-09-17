@@ -1,8 +1,10 @@
 <p>comp1 works!</p>
-<button (click)="showUsers()">Show Users</button><br>
-<button (click)="addUser()">Add User</button><br>
+<button (click)="showUsers()">Show Users</button><br />
+<button (click)="addUser()">Add User</button><br />
 <button (click)="removeFirst()">Remove First Value</button>
 <button (click)="removeLast()">Remove Last</button>
 <ul>
-    <li *ngFor="let user of users">{{user}}</li>
+  <li *ngFor="let user of users">{{ user }}</li>
 </ul>
+
+{{ message }}

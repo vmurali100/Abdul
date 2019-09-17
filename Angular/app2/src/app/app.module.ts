@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-
+import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { Comp1Component } from "./comp1/comp1.component";
@@ -11,7 +11,8 @@ import { Child1Component } from "./child1/child1.component";
 import { Sibling1Component } from "./sibling1/sibling1.component";
 import { Sibling2Component } from "./sibling2/sibling2.component";
 import { HttpClientModule } from "@angular/common/http";
-import { HttpComponent } from './HttpCommunication/http/http.component';
+import { HttpComponent } from "./HttpCommunication/http/http.component";
+import { Form1Component } from "./FormsComponents/form1/form1.component";
 
 @NgModule({
   declarations: [
@@ -23,9 +24,10 @@ import { HttpComponent } from './HttpCommunication/http/http.component';
     Child1Component,
     Sibling1Component,
     Sibling2Component,
-    HttpComponent
+    HttpComponent,
+    Form1Component
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,12 +1,28 @@
 <p>http works!</p>
+<form #userForm="ngForm">
+  <label for="firstName">First Name :</label
+  ><input
+    type="text"
+    name="firstName"
+    [(ngModel)]="myuser.firstName"
+  /><br /><br />
+  <label for="lastName">Last Name :</label
+  ><input type="text" name="lastName" [(ngModel)]="myuser.lastName" /><br />
+  <button (click)="addUser(userForm)">Add User</button><br /><br />
+  <button (click)="updateUser()">Update User</button>
+</form>
+<br />
+<hr />
 
-<ul *ngFor="let obj of data">
-  <li>{{ obj.fname }}</li>
-  <li>{{ obj.lname }}</li>
-  <li>{{ obj.tel }}</li>
-  <li>{{ obj.address }}</li>
-  <li>{{ obj.city }}</li>
-  <li>{{ obj.state }}</li>
-  <li>{{ obj.zip }}</li>
-  <hr />
+<ul *ngFor="let user of users">
+  <li>
+    {{ user.firstName }} - {{ user.lastName }} -
+    <span
+      (click)="deleteUser(user)"
+      style="width: 40px;height: 40px;background: red;border-radius: 50%; color: white; cursor: pointer;"
+    >
+      X
+    </span>
+    <button (click)="editUser(user)">Edit User</button>
+  </li>
 </ul>
